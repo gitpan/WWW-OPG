@@ -1,0 +1,57 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.61.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+SHA1 b166f61ab2155fa70e2d74aae0b8ef39dd06e9cd Build.PL
+SHA1 d764e4b25ea4f099ce5803b89958549e360a16bd Changes
+SHA1 40dbe2293d1797c99ca91d7513c2243ecba8ed8b LICENSE
+SHA1 7aa66a618f4242478134f8c813cbda6411b5f34c MANIFEST
+SHA1 00fed5572918028398abb60a54b2ebfff4e4f9de MANIFEST.SKIP
+SHA1 d3a33c26d96fe54f190c74ee65fd2323360dba17 META.yml
+SHA1 d453ec9fb49a69d6cfeb5e5b2358b6d3dd9de2b1 README
+SHA1 c27449d15022e7e3b30686f7b48310fa731c1874 examples/rrdtool/create.pl
+SHA1 f0d3e292d265a52171ffbd25f15222ab1e7c202f examples/rrdtool/graph.pl
+SHA1 1c72a04e37b958b315616ca5a2bff6d2e0cbe7e2 examples/rrdtool/update.pl
+SHA1 25edd972bc37fed02eaaf07ed801f54802326251 examples/run.pl
+SHA1 a6aca8a26e26a8020f62fdd6412680a34e995874 lib/WWW/OPG.pm
+SHA1 c538cc4a0d6d3aabf8eb8dfafafbaa1a239c9d35 t/00signature.t
+SHA1 3e9a3181d9d2c964853b1f1a22b33f75df368574 t/01manifest.t
+SHA1 14b28e5ee13d6b765b8974d5b1851666509a176a t/02compile.t
+SHA1 96e9368ec81c1c75e912cbee28683184965b7d2f t/03core.t
+SHA1 9cf1fcc0ae0bd65dcb4c9c715d3ad967bc878c3c t/04live.t
+SHA1 0c31a6c56e215a8a1c316c0877700a563e65aac5 t/05exceptions.t
+SHA1 30f7cd0fd94e7cbfa99103a13469ec7ee43b0b5d t/97pod.t
+SHA1 4d4bb37a2645659783a3f667ef68597733d24722 t/98pod-coverage.t
+SHA1 38039ef0a99349b727ba0c52adb8c11fe849193e t/99kwalitee.t
+SHA1 737546a9f397e850081aa3e7283b4a2b9f5340ca t/99meta.t
+SHA1 2f198f39ed7c7b6c001dec19684d9f67ab7d93d9 t/99min-perl.t
+SHA1 3156715b3c64985b05daa85084df0a35099d9983 t/99portability.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.10 (GNU/Linux)
+
+iQIcBAEBCAAGBQJLNagjAAoJEPPC9oiiHLZIKScQAKywfp8NH/ExkdmgEG4fnITS
+2rbFhXsJb/EW2zE4h3p59iBrantUdb1pu3k2VY5wqJ96GwVz2FF2fe6FRa75lw/x
+QLnc2y8XYoWXoOiNTHB/t/RDc/dZyRILNkswtmmz3YRvzewXKy6x4xm96ZHmZvf6
+CuofuqhUxIakM2G1FP5cJ+8mQYle5lY9w2VTI2gEsilKdLcSQl0LhpsTrYjwI+zK
+Tg2jtuwFosRoA74XKWlqR1vtBbLtuwvj9RlaqdJFtYvXB+y2dkU+Yz0A45VJ3KVt
+Kpp78n07I8fWQhWNmE38G85IU11HV56zH5y30KwcWya8scDjAxhvDzDZLTtKUDWS
+0szMmVGULBe7D11bl6vVD7ptZLMvOrsOOzbTuVEiDyQMEwskYyMAxCuHxE/62qOP
+V0hMiaambDsPto4om9+sRNxUP/eSaasNLpJPnYUTdwOXKehIpARUYJ/bYIE9imCb
+sqYlBKgZ26+Yv/MutBhdoxgr1AaKiJiLkpAv2JITUcpCIcLCYhuhTa3/PuhL1YkZ
+Ec84JIytkY8vna8zYGefNr47RGHbtmQBVTETG3ubmsp9HIW+EJFQPViOouLzvwdF
+y7c9J+tBizJDNwsEXafuP+h++RCeGYTuIZxCnDGXfFHxYyIUqey9cE/FFCcYZK8F
+yKrMSYJLEyV8MDSSS8KZ
+=69Zf
+-----END PGP SIGNATURE-----

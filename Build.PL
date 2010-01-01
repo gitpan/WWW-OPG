@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 10600 2009-12-23 03:27:41Z FREQUENCY@cpan.org $
+# $Id: Build.PL 10704 2010-01-01 01:28:37Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -23,9 +23,11 @@ my $builder = Module::Build->new(
 
   requires => {
     'perl'              => 5.006,
+    'LWP::UserAgent'    => 0,
 
     # The tests are based on Test::More
     'Test::More'        => 0.62,
+    'DateTime'          => 0.4305,
   },
   build_requires => {
     # User tests for good functionality

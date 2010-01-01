@@ -3,7 +3,7 @@
 # examples/rrdtool/graph.pl
 #  Update the graphs based on the current time
 #
-# $Id: graph.pl 10634 2009-12-26 04:55:13Z FREQUENCY@cpan.org $
+# $Id: graph.pl 10660 2009-12-28 14:41:35Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -43,6 +43,8 @@ sub plot {
     height         => 150,
     watermark      => 'by Jonathan Yu <http://luminescent.ca>',
     slope_mode     => undef,
+    alt_autoscale  => undef,
+    interlaced     => undef,
 
     start          => $now->clone->subtract( seconds => $period ),
     end            => $now,
@@ -51,7 +53,15 @@ sub plot {
       name      => 'opg',
       dsname    => 'opg', 
       type      => 'area',
-      color     => '00FF00',
+      color     => '00BFFF88',
+    },
+
+    draw => {
+      name      => 'opg-line',
+      dsname    => 'opg',
+      type      => 'line',
+      thickness => 2,
+      color     => '00BFFF',
       legend    => 'Power Generation',
     },
 
@@ -93,11 +103,13 @@ sub plot {
       type      => 'line',
       name      => '95percent',
       vdef      => 'opg,95,PERCENT',
+      color     => '191970',
+      thickness => 1.5,
       legend    => '95% utilisation',
     },
     gprint => {
       draw      => '95percent',
-      format    => '%0.2lf\l',
+      format    => '%0.2lf MWe\l',
     },
   );
 }

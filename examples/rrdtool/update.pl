@@ -3,7 +3,7 @@
 # examples/rrdtool/update.pl
 #  Update OPG stats in Round Robin Database
 #
-# $Id: update.pl 10634 2009-12-26 04:55:13Z FREQUENCY@cpan.org $
+# $Id: update.pl 10656 2009-12-28 03:34:16Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -35,22 +35,22 @@ for (1..24) {
   eval {
     # Only update if the data has been updated
     if ( $opg->poll() ) {
-      print "Currently generating ", $opg->power, " MW of electricity ";
-      print "(As of ", $opg->last_updated, ")\n";
+      print 'Currently generating ', $opg->power, ' MW of electricity ',
+        '(As of ', $opg->last_updated, ")\n";
 
       $rrd->update(
         time    => $opg->last_updated,
         value   => $opg->power,
       );
     }
-
-    # Nyquist Sampling Rate is 2 times maximum update frequency; we want to
-    # update at twice the rate of the signal (1 event/5 minutes)
-    sleep(2.5*60);
   };
   if ($@) {
     print STDERR $@;
   }
+
+  # Nyquist Sampling Rate is 2 times maximum update frequency; we want to
+  # update at twice the rate of the signal (1 event/5 minutes)
+  sleep(2.5*60);
 }
 
 =head1 AUTHOR

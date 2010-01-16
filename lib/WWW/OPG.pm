@@ -1,7 +1,7 @@
 # WWW::OPG
 #  Perl interface to Ontario Power Generation's site
 #
-# $Id: OPG.pm 10933 2010-01-11 03:15:58Z FREQUENCY@cpan.org $
+# $Id: OPG.pm 11016 2010-01-16 06:11:43Z FREQUENCY@cpan.org $
 
 package WWW::OPG;
 
@@ -18,11 +18,11 @@ WWW::OPG - Perl interface to Ontario Power Generation's site
 
 =head1 VERSION
 
-Version 1.004 ($Id: OPG.pm 10933 2010-01-11 03:15:58Z FREQUENCY@cpan.org $)
+Version 1.005 ($Id: OPG.pm 11016 2010-01-16 06:11:43Z FREQUENCY@cpan.org $)
 
 =cut
 
-our $VERSION = '1.004';
+our $VERSION = '1.005';
 $VERSION = eval $VERSION;
 
 =head1 SYNOPSIS
@@ -126,7 +126,7 @@ sub poll {
 
   my ($power, $date) = split(chr(13) . chr(10), $r->content);
 
-  if ($power =~ m{^([0-9]+),?([0-9]+)$})
+  if ($power =~ m{^\s*([0-9]+),?([0-9]+)$})
   {
     $self->{power} = $1 . $2;
 
